@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap'); 
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 * {
   box-sizing: border-box;
@@ -6,17 +7,18 @@
 
 body {
   font-family: 'Muli', sans-serif;
-  overflow: hidden;
+  font-style: italic;
+  text-transform: uppercase;
+  
   margin: 0;
   background: rgb(212, 206, 206);
   height: 100vh;
+}
+.container{
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.container{
   width: 100%;
-  display: flex;
   padding: 0 20px;
 }
 .slide{
@@ -49,6 +51,77 @@ body {
 .slide.active h3{
   opacity: 1;
   transition: opacity 0.3s ease-in 0.4s;
+}
+/*drag-n-drop*/
+.drag__drop{
+  margin: 100px 0;
+}
+.drag__drop-title{
+  font-size: 25px;
+  font-style: italic;
+  text-align: center;
+  padding-bottom: 50px;
+}
+.row {
+  display: flex;
+  width: 600px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.col-header {
+  width: 150px;
+  text-align: center;
+  box-shadow: 4px 4px 9px rgba(12, 12, 12, 0.36);
+  border-radius: 20px;
+  padding: 0.8rem 1rem;
+  color: #fff;
+}
+
+.item {
+  width: 150px;
+  height: 30px;
+  border: 1px solid #eee;
+  box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
+  border-radius: 20px;
+  background: #f7f6f7;
+  padding: 5px 5px;
+  color: #030303;
+  text-align: center;
+  cursor: grab;
+}
+
+.item:active {
+  cursor: grabbing;
+}
+
+.placeholder {
+  width: 150px;
+  height: 66px;
+}
+
+.start {
+  background: linear-gradient(90deg, #080808 0%, #142b3a 179.25%);
+}
+
+.progress {
+  background: linear-gradient(90deg, #6a6262 0%, #898989 100%);
+}
+
+
+.done {
+  background: linear-gradient(90deg, #0011b3 0%, #2421cb 100%);
+}
+.hold{
+  border: 5px solid #eee;
+}
+.hide{
+  display: none;
+}
+.hovered{
+  border-top: 2px solid #8ed7ed;
 }
 
 
